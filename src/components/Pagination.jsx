@@ -1,6 +1,34 @@
 import { IoIosArrowBack } from "react-icons/io";
 
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
+  let pages = [];
+  if (totalPages > 6) {
+    if (currentPage < 4) {
+      pages = [1, 2, 3, 4, "...", totalPages];
+    } else if (totalPages - currentPage < 4) {
+      pages = [
+        1,
+        "...",
+        totalPages - 3,
+        totalPages - 2,
+        totalPages - 1,
+        totalPages,
+      ];
+    } else {
+      pages = [
+        1,
+        "...",
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        "...",
+        totalPages,
+      ];
+    }
+  } else {
+    pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+
   return (
     <div className="flex justify-center mt-5 space-x-2">
       <button
@@ -11,7 +39,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       >
         <IoIosArrowBack className=" text-gray-700 dark:text-gray-300" />
       </button>
-      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+      {pages.map((page) => (
         <button
           key={page}
           onClick={() => onPageChange(page)}
