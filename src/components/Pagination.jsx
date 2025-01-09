@@ -1,7 +1,7 @@
 import { IoIosArrowBack } from "react-icons/io";
 
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
-  totalPages = 100;
+
   let pages = [];
   if (totalPages > 6) {
     if (currentPage < 4) {
