@@ -38,6 +38,10 @@ function checkAuthLoader() {
   if (!!!isAuth) {
     return redirect("/login");
   }
+  if (location.pathname === "/") {
+    console.log(true)
+    // return redirect("/dashboard")
+  };
 }
 
 export { login, checkUserName, checkPassword, isLoggedIn, checkAuthLoader };

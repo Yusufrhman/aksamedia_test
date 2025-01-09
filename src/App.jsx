@@ -74,6 +74,12 @@ function App() {
       loader: checkAuthLoader,
       children: [
         {
+          path: "",
+          loader: () => {
+            return redirect("/dashboard");
+          },
+        },
+        {
           path: "dashboard/:page?",
           element: <DashboardPage />,
         },
