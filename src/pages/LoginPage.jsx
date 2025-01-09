@@ -43,7 +43,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="w-full h-screen flex items-center justify-center transition-colors duration-300">
+    <main className="w-full h-[100svh] flex items-center justify-center transition-colors duration-300">
       <div className="max-w-sm w-full p-6 bg-white dark:bg-gray-800 shadow-xl rounded-lg mx-5 transition-all duration-300">
         <h1 className="text-2xl font-semibold text-teal-600 dark:text-teal-600 mb-4 text-center">
           Login
