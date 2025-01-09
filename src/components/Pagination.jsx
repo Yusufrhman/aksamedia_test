@@ -6,7 +6,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
   if (totalPages > 6) {
     if (currentPage < 4) {
       pages = [1, 2, 3, 4, "...", totalPages];
-    } else if (totalPages - currentPage < 4) {
+    } else if (totalPages - currentPage < 3) {
       pages = [
         1,
         "...",
