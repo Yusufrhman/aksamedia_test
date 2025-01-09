@@ -27,7 +27,7 @@ export default function DashboardPage() {
     }
   }, [pageQuery, setSearchParams]);
 
-  // Filter  logic
+  // logika filter
   const filteredProducts = filterAndSortProducts(
     products,
     searchQuery,

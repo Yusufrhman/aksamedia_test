@@ -11,7 +11,7 @@ export default function EditProfilePage() {
 
   const [error, setError] = useState({});
   const [user, setUser] = useState({ ...userData });
-  const [updateStatus, setUpdateStatus] = useState(""); // State untuk notifikasi
+  const [updateStatus, setUpdateStatus] = useState(""); 
   const dispatch = useDispatch();
 
   function onSubmit(event) {
@@ -36,7 +36,7 @@ export default function EditProfilePage() {
     }
 
     dispatch(updateUser(enteredData));
-    setUpdateStatus("User updated successfully!"); // Set pesan sukses
+    setUpdateStatus("User updated successfully!"); 
   }
 
   return (

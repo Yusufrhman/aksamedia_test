@@ -5,7 +5,7 @@ import { Category } from "../util/indexedDB";
 import { ProductContext } from "../context/product/ProductContext";
 
 export default function AddProductForm({ onSave }) {
-  // State to manage form values
+  // state untuk manajemen form data
   const [formData, setFormData] = useState({
     name: "",
     price: "",
@@ -17,10 +17,10 @@ export default function AddProductForm({ onSave }) {
     price: "",
     category: "",
   });
-  // call product context
+  // memanggil fungsi add produk dari product context
   const { addNewProduct } = useContext(ProductContext);
 
-  // Handle form submission
+  // form handlingg
   async function handleSubmit(e) {
     e.preventDefault();
     setError({
@@ -41,7 +41,7 @@ export default function AddProductForm({ onSave }) {
     onSave();
   }
 
-  // Handle input changes
+  // handling input change
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData((prev) => ({
