@@ -53,14 +53,14 @@ export default function LoginPage() {
             id="username"
             label="Username"
             type="text"
-            placeholder="Enter your username"
+            placeholder="aksamedia"
             error={error.username}
           />
           <InputField
             id="password"
             label="Password"
             type="password"
-            placeholder="Enter your password"
+            placeholder="aaaaaa"
             error={error.password}
           />
           <MainButton
